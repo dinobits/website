@@ -1,0 +1,18 @@
+{% set path = app.request.get('_route') %}
+
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item{{ path ==  'home'?' active' }}">
+        <a class="nav-link" href="/">Home
+{#            <span class="sr-only">(current)</span>#}
+        </a>
+    </li>
+    <li class="nav-item {{ path == 'giveaways'?' active' }}">
+        <a class="nav-link" href="{{ path('giveaways') }}">GiveAways</a>
+    </li>
+    <li class="nav-item {{ path == 'games'?' active' }}">
+        <a class="nav-link" href="{{ path('games') }}">Games</a>
+    </li>
+    <li class="nav-item {{ path == 'about'?' active' }}">
+        <a class="nav-link" href="{{ path('about') }}">About</a>
+    </li>
+</ul>

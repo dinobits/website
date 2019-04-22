@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Navigation -->
+    {% block navigation %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('home') }}">DinoBits</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    {% include 'default/parts/navigation.html.twig' %}
+                </div>
+            </div>
+        </nav>
+    {% endblock navigation %}
+
+    <!-- Header -->
+    {% block header %}
+        {% if app.request.get('_route') == 'home' %}
+            <header class="bg-primary py-5 mb-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-12">
+                            <h1 class="display-4 text-white mt-5 mb-2">DinoBits</h1>
+                            <p class="lead mb-5 text-white-50">Wellcome to DinoBits portal. Here you can find all active
+                                giveaways, games, tutorials, and many other things that I, DinoCrys, do with my stream
+                                chat</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endif %}
+    {% endblock header %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        {% block content %}
+            <div class="row">
+                <div class="col-md-8 mb-5">
+                    <h2>What We Do</h2>
+                    <hr>
+                    <p>This is website from My twitch channel. Here I post all the games, giveaways and stuff that we make
+                    together with my stream chat and frends</p>
+                    <p>You can easily contact me or post your own changes to this website via github</p>
+{#                    <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>#}
+                </div>
+                <div class="col-md-4 mb-5">
+                    {% include 'default/parts/contacts.html.twig' %}
+                </div>
+            </div>
+        {% endblock content %}
+
+        <!-- /.row -->
+
+        {#        <div class="row">#}
+        {#            <div class="col-md-4 mb-5">#}
+        {#                <div class="card h-100">#}
+        {#                    <img class="card-img-top" src="http://placehold.it/300x200" alt="">#}
+        {#                    <div class="card-body">#}
+        {#                        <h4 class="card-title">Card title</h4>#}
+        {#                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse#}
+        {#                            necessitatibus neque sequi doloribus.</p>#}
+        {#                    </div>#}
+        {#                    <div class="card-footer">#}
+        {#                        <a href="#" class="btn btn-primary">Find Out More!</a>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col-md-4 mb-5">#}
+        {#                <div class="card h-100">#}
+        {#                    <img class="card-img-top" src="http://placehold.it/300x200" alt="">#}
+        {#                    <div class="card-body">#}
+        {#                        <h4 class="card-title">Card title</h4>#}
+        {#                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse#}
+        {#                            necessitatibus neque sequi doloribus totam ut praesentium aut.</p>#}
+        {#                    </div>#}
+        {#                    <div class="card-footer">#}
+        {#                        <a href="#" class="btn btn-primary">Find Out More!</a>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col-md-4 mb-5">#}
+        {#                <div class="card h-100">#}
+        {#                    <img class="card-img-top" src="http://placehold.it/300x200" alt="">#}
+        {#                    <div class="card-body">#}
+        {#                        <h4 class="card-title">Card title</h4>#}
+        {#                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse#}
+        {#                            necessitatibus neque.</p>#}
+        {#                    </div>#}
+        {#                    <div class="card-footer">#}
+        {#                        <a href="#" class="btn btn-primary">Find Out More!</a>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    {% block footer %}
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                {% include 'default/parts/footer.html.twig' %}
+            </div>
+            <!-- /.container -->
+        </footer>
+    {% endblock footer %}
+{% endblock body %}

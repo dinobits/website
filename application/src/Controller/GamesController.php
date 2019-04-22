@@ -8,21 +8,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class GamesController extends AbstractController
 {
-
     /**
-    * @Route("/games")
+    * @Route("/games", name="games")
     */
     public function list(): Response
     {
         $games = ['example'];
-        return $this->render('games/example.html.twig', [
+        return $this->render('default/pages/games.html.twig', [
             'games' => $games,
         ]);
     }
 
     /**
     * @Route("/games/example")
-    * @Route("/")
     */
     public function index(): Response
     {

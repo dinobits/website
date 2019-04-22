@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ description }}">
+        <meta name="author" content="{{ author }}">
         <meta charset="UTF-8">
+
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+            <!-- Bootstrap core CSS -->
+            <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+            <!-- Custom styles for this template -->
+            <link href="/css/business-frontpage.css" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+
+        {% endblock %}
+
+        {% block javascripts %}
+            <script src="/vendor/jquery/jquery.min.js"></script>
+            <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        {% endblock %}
     </body>
 </html>
