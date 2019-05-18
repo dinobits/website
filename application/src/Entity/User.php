@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -32,6 +34,16 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductInventory", mappedBy="claimed_by")
+     */
+    private $productInventories;
+
+    public function __construct()
+    {
+        $this->productInventories = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -109,5 +121,36 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|ProductInventory[]
+     */
+    public function getProductInventories(): Collection
+    {
+        return $this->productInventories;
+    }
+
+    public function addProductInventory(ProductInventory $productInventory): self
+    {
+        if (!$this->productInventories->contains($productInventory)) {
+            $this->productInventories[] = $productInventory;
+            $productInventory->setClaimedBy($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProductInventory(ProductInventory $productInventory): self
+    {
+        if ($this->productInventories->contains($productInventory)) {
+            $this->productInventories->removeElement($productInventory);
+            // set the owning side to null (unless already changed)
+            if ($productInventory->getClaimedBy() === $this) {
+                $productInventory->setClaimedBy(null);
+            }
+        }
+
+        return $this;
     }
 }

@@ -42,8 +42,9 @@ GiveAway - List of Active products.
 Mysql
 
 * User
+  * type/is activated. for linking with twitch
 
-* GiveAway
+* GiveAway ???
   * id
   * Who provided the game
   * Platform (from where the game came or go) (Steam, Origin etc.)
@@ -62,21 +63,49 @@ Mysql
   * name
   * type (->product)
   * platforms (Steam-linux, Steam-windows)
-  * date created
-  * date updated
-  * date claimed
+  * description
 * Platform
   * id
   * name
   * Description
-  * is active
+  <!-- * is active -->
 * ProductType (game, application, book)
   * id
   * name
   * description
+* Product Inventory
+  * id
+  * product
+  * provider
+  * url - link to product page (for provider)
+  * platform (null)
+  * code (claimable code, when provided to someone, he can claim it) (null)
+  * claimed by -> user
+  * comment (about what, when, why etc)
+  * created_at
+  * updated_at
+  * claimed_at
+  * is_active
+  * is_enabled
+  * active + enabled (is available)
+* Provider
+  * id
+  * type (provider type) User/ Shop/ 
+  * url
+  * description
+  * comment
+
 
 * OS ?
 
 * ChatBot (with data)
 * Games (phase and others)
 * Posts/blog (news)
+
+
+
+Product
+Provider
+Platform
+
+Inventory

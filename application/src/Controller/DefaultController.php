@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\ProductInventory;
+use App\Repository\ProductInventoryRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,7 +27,14 @@ class DefaultController extends AbstractController
      */
     public function giveaways(): Response
     {
-        return $this->render('default/pages/giveaway.html.twig');
+        /** @var ProductInventoryRepository $pi_repository */
+        $pi_repository = $this->getDoctrine()->getRepository(ProductInventory::class);
+        $items = $pi_repository->findAllAvailable();
+
+
+        return $this->render('default/pages/giveaway.html.twig', [
+            'items' => $items
+        ]);
     }
 
     /**
