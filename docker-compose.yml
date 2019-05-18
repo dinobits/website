@@ -22,3 +22,12 @@ services:
         - ./application:/application
         - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
 
+    db:
+      image: mysql:5.7
+      environment:
+        MYSQL_ROOT_PASSWORD: dinobits_root!dinobits_root
+        MYSQL_DATABASE: dinobits
+        MYSQL_USER: dinobits
+        MYSQL_PASSWORD: dinobits!dinobits
+      ports:
+        - "9906:3306"
