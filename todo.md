@@ -103,9 +103,4 @@ Mysql
 * Posts/blog (news)
 
 
-
-Product
-Provider
-Platform
-
-Inventory
+For twith integration we need some URL
