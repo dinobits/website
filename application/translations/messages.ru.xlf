@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="ru">
+  <file id="messages.ru">
+    <unit id="lpzL089" name="Email">
+      <notes>
+        <note category="file-source" priority="1">src/Form/RegistrationFormType.php:19</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="588_9PF" name="Password">
+      <notes>
+        <note category="file-source" priority="1">src/Form/RegistrationFormType.php:24</note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="p7FoULE" name="website.title">
+      <notes>
+        <note category="file-source" priority="1">templates/default/layout.html.twig:27</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>website.title</source>
+        <target>ДиноБитс</target>
+      </segment>
+    </unit>
+    <unit id="hpB4ukm" name="website.welcome">
+      <notes>
+        <note category="file-source" priority="1">templates/default/layout.html.twig:28</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>website.welcome</source>
+        <target>Веллкам! Русский велкам тут</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

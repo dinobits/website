@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="ru">
+  <file id="validators.ru">
+    <unit id="YRKYC4." name="There is already an account with this email">
+      <notes>
+        <note category="file-source" priority="1">src/Entity/User.php:0</note>
+      </notes>
+      <segment>
+        <source>There is already an account with this email</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

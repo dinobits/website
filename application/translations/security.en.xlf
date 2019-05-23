@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="security.en">
+    <unit id="qr0aiUo" name="Invalid credentials.">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Invalid credentials.</source>
+        <target>The password you entered was invalid!</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
